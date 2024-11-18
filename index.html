@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/img/Gastos.ico">
+    <title>Control de Gastos Mensuales</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="img-container">
+                <h1>Control de Gastos Mensuales</h1>
+            </div>
+            <div id="mensajeAdvertencia" class="mensaje-advertencia" style="display: none;">
+                <div class="mensaje-contenido">
+                    <span id="textoAdvertencia"></span>
+                    <span id="montoExcedente"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" id="nombreGasto" placeholder="Nombre del gasto" required>
+                <textarea id="descripcionGasto" placeholder="Descripción detallada del gasto" rows="3" required></textarea>
+                <input type="number" id="valorGasto" placeholder="Valor del gasto en COP" min="0" step="1" required>
+                <button id="botonFormulario">Agregar Gasto</button>
+            </div>
+            <ul id="listaDeGastos"></ul>
+            <div class="total">
+                Total Mensual: <span id="totalGastos">$0</span> COP
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Edición -->
+    <div id="modalEdicion" class="modal" style="display: none;">
+        <div class="modal-contenido">
+            <h2>Editar Gasto</h2>
+            <div class="form-group">
+                <input type="text" id="editNombreGasto" placeholder="Nombre del gasto" required>
+                <textarea id="editDescripcionGasto" placeholder="Descripción detallada del gasto" rows="3" required></textarea>
+                <input type="number" id="editValorGasto" placeholder="Valor del gasto en COP" min="0" step="1" required>
+                <div class="modal-botones">
+                    <button id="guardarEdicion" class="boton-guardar">Guardar Cambios</button>
+                    <button id="cancelarEdicion" class="boton-cancelar">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sección Footer -->
+    <footer>
+        <p>Realizado por Yully Garzón - &copy;2024</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
